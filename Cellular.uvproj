@@ -16,10 +16,10 @@
           <Vendor>Atmel</Vendor>
           <Cpu>IRAM(0 - 0xFF) IROM(0-0x3FFF) XRAM(0 - 0xFF) CLOCK(60000000) MODP2</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile>".\STARTUP.A51" ("Standard 8051 Startup Code")</StartupFile>
+          <StartupFile>"LIB\STARTUP.A51" ("Standard 8051 Startup Code")</StartupFile>
           <FlashDriverDll></FlashDriverDll>
           <DeviceId>3752</DeviceId>
-          <RegisterFile></RegisterFile>
+          <RegisterFile>at89c51RB2.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -33,7 +33,7 @@
           <BinPath>C:\Keil\C51\BIN\</BinPath>
           <IncludePath></IncludePath>
           <LibPath></LibPath>
-          <RegisterFilePath></RegisterFilePath>
+          <RegisterFilePath>ATMEL\</RegisterFilePath>
           <DBRegisterFilePath>ATMEL\</DBRegisterFilePath>
           <TargetStatus>
             <Error>0</Error>
@@ -163,19 +163,19 @@
             <DriverSelection>-1</DriverSelection>
           </Flash1>
           <Flash2></Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
         </Utilities>
         <Target51>
           <Target51Misc>
-            <MemoryModel>0</MemoryModel>
+            <MemoryModel>2</MemoryModel>
             <RTOS>0</RTOS>
             <RomSize>2</RomSize>
             <DataHold>0</DataHold>
             <XDataHold>0</XDataHold>
             <UseOnchipRom>1</UseOnchipRom>
             <UseOnchipArithmetic>0</UseOnchipArithmetic>
-            <UseMultipleDPTR>1</UseMultipleDPTR>
+            <UseMultipleDPTR>0</UseMultipleDPTR>
             <UseOnchipXram>1</UseOnchipXram>
             <HadIRAM>1</HadIRAM>
             <HadXRAM>1</HadXRAM>
@@ -278,13 +278,13 @@
             </OnChipMemories>
           </Target51Misc>
           <C51>
-            <RegisterColoring>0</RegisterColoring>
-            <VariablesInOrder>0</VariablesInOrder>
+            <RegisterColoring>1</RegisterColoring>
+            <VariablesInOrder>1</VariablesInOrder>
             <IntegerPromotion>1</IntegerPromotion>
             <uAregs>0</uAregs>
             <UseInterruptVector>1</UseInterruptVector>
             <Fuzzy>7</Fuzzy>
-            <Optimize>9</Optimize>
+            <Optimize>0</Optimize>
             <WarningLevel>2</WarningLevel>
             <SizeSpeed>1</SizeSpeed>
             <ObjectExtend>1</ObjectExtend>
@@ -326,8 +326,8 @@
             <UserClasses></UserClasses>
             <CSection></CSection>
             <UserSection></UserSection>
-            <CodeBaseAddress>0X0000-0X3FFF</CodeBaseAddress>
-            <XDataBaseAddress>0X0000-0X00FF</XDataBaseAddress>
+            <CodeBaseAddress></CodeBaseAddress>
+            <XDataBaseAddress></XDataBaseAddress>
             <PDataBaseAddress></PDataBaseAddress>
             <BitBaseAddress></BitBaseAddress>
             <DataBaseAddress></DataBaseAddress>
@@ -371,6 +371,16 @@
               <FileType>5</FileType>
               <FilePath>.\Header Files\ErrorHandler.h</FilePath>
             </File>
+            <File>
+              <FileName>GlobalDeclarations.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Header Files\GlobalDeclarations.h</FilePath>
+            </File>
+            <File>
+              <FileName>MemoryHandler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Header Files\MemoryHandler.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -380,11 +390,6 @@
               <FileName>Timers.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source Files\Timers.c</FilePath>
-            </File>
-            <File>
-              <FileName>Ports.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source Files\Ports.c</FilePath>
             </File>
             <File>
               <FileName>LedsInterface.c</FileName>
@@ -400,6 +405,11 @@
               <FileName>ErrorHandler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source Files\ErrorHandler.c</FilePath>
+            </File>
+            <File>
+              <FileName>MemoryHandler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source Files\MemoryHandler.c</FilePath>
             </File>
           </Files>
         </Group>

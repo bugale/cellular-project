@@ -15,9 +15,9 @@ void Timers_StopMainTimer()
 }
 void Timers_Wait_rounds(unsigned int rounds)
 {
-	int i;
+	data unsigned int i;
 	for (i = 0; i < rounds; i++, CF = 0)
-		while (!CF);
+		while (!TF0);
 }
 void Timers_Wait_ms(unsigned int milliseconds)
 {

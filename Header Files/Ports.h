@@ -10,4 +10,4 @@ sbit a2d_cs = P2^5;
 sbit a2d_d = P2^7;
 sbit a2d_clk = P2^6;
 sbit test = P1^4;
-sbit relay0 = P1^2;
+sbit Relay0Starter = P1^2;

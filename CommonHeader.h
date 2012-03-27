@@ -3,6 +3,11 @@
 	#define STDIO
 #endif
 
+#ifndef STDLIB
+	#include <stdlib.h>
+	#define STDLIB
+#endif
+
 #ifndef at89c51rb2
 	#include <at89c51rb2.h>
 	#define at89c51rb2
@@ -28,12 +33,17 @@
 	#define ModemInterface
 #endif
 
-#ifndef GlobalDeclarations
-	#include "Header Files\GlobalDeclarations.h"
-	#define GlobalDeclarations
-#endif
-
 #ifndef ErrorHandler
 	#include "Header Files\ErrorHandler.h"
 	#define ErrorHandler
+#endif
+
+#ifndef MemoryHandler
+	#include "Header Files\MemoryHandler.h"
+	#define MemoryHandler
+#endif
+
+#ifndef GlobalDeclarations
+	#include "Header Files\GlobalDeclarations.h"
+	#define GlobalDeclarations
 #endif
